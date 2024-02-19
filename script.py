@@ -9,7 +9,7 @@ def login(username, password):
     login_url = f"{base_url}/login"
     login_data = {"username": username, "password": password}
     login_response = requests.post(login_url, json=login_data)
-    login_response.raise_for_status()  # Raise an exception for non-200 responses
+    login_respgonse.raise_for_status()  # Raise an exception for non-200 responses
     return login_response.json().get("token")
 
 # Function to make the API call to /compliance/posture endpoint
@@ -23,13 +23,13 @@ def get_compliance_data(token, time_type, time_amount, time_unit):
     }
     compliance_response = requests.get(compliance_url, headers=headers, json=data)
     compliance_response.raise_for_status()  # Raise an exception for non-200 responses
-    return compliance_response.json()
+    return compliance_response.json()ff
 
 # Make the API calls and output the retrieved data
 def main():
     # Make login API call
     username = "testuser"
-    password = "testpassword"
+    password = "testpassword"|||
     token = login(username, password)
     print("Login Successful. Token:", token)
 
@@ -42,3 +42,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    test
+    
+    trr
